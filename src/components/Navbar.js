@@ -1,14 +1,10 @@
 import {Link} from 'gatsby'
 import styled from '@emotion/styled'
-import React, {useState} from 'react'
+import React from 'react'
 
 const SiteHeader = styled.header`
 	background: transparent;
 	display: flex;
-`
-
-const Logo = styled(Link)`
-	position: absolute;
 `
 
 const Nav = styled.nav`
@@ -35,16 +31,22 @@ const NavLink = styled(Link)`
 	}
 `
 
-const Header = ({siteTitle}) => {
-	const [value] = useState(0)
+const Header = () => {
 	return (
 		<SiteHeader>
-			<Logo to='/'>{siteTitle}</Logo>
-			<Nav value={value}>
-				<NavLink to='/vision'>Vision</NavLink>
-				<NavLink to='/studio'>Studio</NavLink>
-				<NavLink to='/builder'>Builder</NavLink>
-				<NavLink to='/blog'>Blog</NavLink>
+			<Nav>
+				<NavLink fade to='/vision'>
+					Vision
+				</NavLink>
+				<NavLink fade to='/studio'>
+					Studio
+				</NavLink>
+				<NavLink fade to='/builder'>
+					Builder
+				</NavLink>
+				<NavLink fade to='/blog'>
+					Blog
+				</NavLink>
 			</Nav>
 		</SiteHeader>
 	)

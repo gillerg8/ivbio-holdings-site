@@ -25,9 +25,6 @@ const Logo = styled(Link)`
 		width: 100%;
 		transition-duration: 0.4s;
 	}
-	&:hover img {
-		transform: scale(1.3);
-	}
 	@media (max-width: 1200px) {
 		display: block;
 		position: relative;
@@ -38,16 +35,14 @@ const Logo = styled(Link)`
 
 const Content = styled.div`
 	margin: 0 auto;
-	max-width: 860px;
-	padding: 0 1.0875rem 1rem;
 	padding-top: 0;
 `
 
 const Footer = styled.footer`
-	position: absolute;
-	right: 0;
-	bottom: 0;
+	position: fixed;
 	left: 0;
+	bottom: 0;
+	width: 100%;
 	padding: 1rem;
 	background-color: #efefef;
 	text-align: center;
@@ -60,10 +55,10 @@ const Layout = ({children}) => (
 		</Logo>
 		<Content>
 			<main>{children}</main>
-			<Footer>
-				© {new Date().getFullYear()} IV BioHoldings. All Rights Reserved.
-			</Footer>
 		</Content>
+		<Footer>
+			© {new Date().getFullYear()} IV BioHoldings. All Rights Reserved.
+		</Footer>
 	</Fragment>
 )
 
