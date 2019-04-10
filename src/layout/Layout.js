@@ -5,13 +5,13 @@
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
 
-import React, {Fragment} from 'react'
-import PropTypes from 'prop-types'
-import {Link} from 'gatsby'
-import styled from '@emotion/styled'
-import Icon from '../images/ivbio-icon.png'
+import React, {Fragment} from 'react';
+import PropTypes from 'prop-types';
+import {Link} from 'gatsby';
+import styled from '@emotion/styled';
+import Icon from '../images/ivbio-icon.png';
 
-import './layout.css'
+import './layout.css';
 
 const Logo = styled(Link)`
 	position: absolute;
@@ -24,6 +24,10 @@ const Logo = styled(Link)`
 	img {
 		width: 100%;
 		transition-duration: 0.4s;
+		filter: brightness(100%);
+	}
+	img:hover {
+		filter: brightness(120%);
 	}
 	@media (max-width: 1200px) {
 		display: block;
@@ -31,12 +35,12 @@ const Logo = styled(Link)`
 		left: 0;
 		top: 0;
 	}
-`
+`;
 
 const Content = styled.div`
 	margin: 0 auto;
 	padding-top: 0;
-`
+`;
 
 const Footer = styled.footer`
 	position: fixed;
@@ -46,7 +50,7 @@ const Footer = styled.footer`
 	padding: 1rem;
 	background-color: #efefef;
 	text-align: center;
-`
+`;
 
 const Layout = ({children}) => (
 	<Fragment>
@@ -60,10 +64,10 @@ const Layout = ({children}) => (
 			© {new Date().getFullYear()} IV BioHoldings. All Rights Reserved.
 		</Footer>
 	</Fragment>
-)
+);
 
 Layout.propTypes = {
 	children: PropTypes.node.isRequired
-}
+};
 
-export default Layout
+export default Layout;
