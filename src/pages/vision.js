@@ -4,7 +4,7 @@ import {css} from '@emotion/core'
 import styled from '@emotion/styled'
 
 import Layout from '../layout/Layout'
-import SEO from '../components/Seo'
+import SEO from '../components/seo'
 
 const Content = styled.div`
 	margin: 0 auto;

@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Layout from '../layout/Layout'
-import SEO from '../components/Seo'
+import SEO from '../components/seo'
 
 import styled from '@emotion/styled'
 import Navbar from '../components/Navbar.js'
