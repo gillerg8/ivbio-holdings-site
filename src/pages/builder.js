@@ -1,98 +1,106 @@
-import React from 'react'
-import {Link, graphql} from 'gatsby'
-import {css} from '@emotion/core'
-import styled from '@emotion/styled'
+import React from 'react';
+import styled from '@emotion/styled';
 
-import Layout from '../layout/Layout'
-import SEO from '../components/seo'
+import Layout from '../layout/Layout';
+import SEO from '../components/seo';
+import MartyImage from '../images/marty-portrait.jpg';
 
 const Content = styled.div`
 	margin: 0 auto;
 	max-width: 860px;
-	padding: 1.45rem 1.0875rem;
-`
+	padding: 3rem 1.0875rem 1.45rem;
+`;
 
-const ArticleDate = styled.h5`
-	display: inline;
-	color: #bbb;
+const Header = styled.h1`
+	margin-bottom: 50px;
+`;
+
+const Quote = styled.blockquote`
+	display: flex;
+	align-items: center;
+	background-color: white;
+	box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+	padding: 15px;
+	margin-bottom: 50px;
+`;
+
+const Card = styled.div`
+	display: flex;
+	align-items: center;
+	background-color: white;
+	box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+	padding: 15px;
+	@media (max-width: 767px) {
+		flex-direction: column;
+	}
+`;
+
+const CardImageContainer = styled.div`
+	display: block;
+`;
+
+const CardImage = styled.img`
+	max-width: 100%;
+	margin: 0;
+`;
+
+const CardFooter = styled.div`
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	padding: 0 15px;
+	@media (max-width: 767px) {
+		padding: 15px 0;
+	}
+`;
+
+const CardTitle = styled.div`
+	font-size: 20px;
+	font-weight: 600;
 	margin-bottom: 10px;
-`
-
-const MarkerHeader = styled.h3`
-	display: inline;
-	border-radius: 1em 0 1em 0;
+`;
+const CardDescription = styled.div`
+	font-size: 14px;
+	color: #4e4e4e;
 	margin-bottom: 10px;
-	background-image: linear-gradient(
-		-100deg,
-		rgba(255, 250, 150, 0.15),
-		rgba(255, 250, 150, 0.8) 100%,
-		rgba(255, 250, 150, 0.25)
-	);
-`
+`;
 
-const ReadingTime = styled.h5`
-	display: inline;
-	color: #bbb;
-	margin-bottom: 10px;
-`
-
-const IndexPage = ({data}) => {
+const Builder = () => {
 	return (
 		<Layout>
-			<SEO title='Blog' />
+			<SEO title='Builder' />
 			<Content>
-				<h1>Blog</h1>
-				{data.allMarkdownRemark.edges.map(({node}) => (
-					<div key={node.id}>
-						<Link
-							to={node.frontmatter.path}
-							css={css`
-								text-decoration: none;
-								color: inherit;
-							`}
-						>
-							<MarkerHeader>{node.frontmatter.title} </MarkerHeader>
-							<div>
-								<ArticleDate>{node.frontmatter.date}</ArticleDate>
-								<ReadingTime> - {node.fields.readingTime.text}</ReadingTime>
-							</div>
-							<p>{node.excerpt}</p>
-						</Link>
-					</div>
-				))}
+				<Header>Blending tradition and innovation</Header>
+				<Quote>
+					"Every decision that I make personally and professionally begins with,
+					and ends with, a genuine and passionate love for people."
+				</Quote>
+				<Card>
+					<CardImageContainer>
+						<CardImage src={MartyImage} alt='Marty Keiser' />
+					</CardImageContainer>
+					<CardFooter>
+						<CardTitle>Marty Keiser</CardTitle>
+						<CardDescription>
+							Marty Keiser is Founder & CEO of IV BioHoldings, LLC, a startup
+							studio focused on producing biotech companies that innovate,
+							disrupt and win. Marty is a creative entrepreneur that brings an
+							imaginative yet practical approach to the studio; combining a
+							decade of proven sales, marketing and Wall Street experience with
+							deep relationships across the healthcare, technology and
+							investment industries, in order to build transformative biotech
+							companies that connect with, uplift and empower human beings
+							around the world. Marty currently resides in his hometown of
+							Fairfield, CT, centrally located to biotech hubs in Massachusetts
+							and New Jersey and just a short train ride to Manhattan.
+						</CardDescription>
+					</CardFooter>
+				</Card>
 			</Content>
 		</Layout>
-	)
-}
+	);
+};
 
-export default IndexPage
-
-export const query = graphql`
-	query {
-		site {
-			siteMetadata {
-				title
-			}
-		}
-		allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {
-			totalCount
-			edges {
-				node {
-					id
-					frontmatter {
-						title
-						date(formatString: "DD MMMM, YYYY")
-						path
-					}
-					fields {
-						slug
-						readingTime {
-							text
-						}
-					}
-					excerpt
-				}
-			}
-		}
-	}
-`
+export default Builder;

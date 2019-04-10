@@ -1,22 +1,22 @@
-import React from 'react'
-import {Link, graphql} from 'gatsby'
-import {css} from '@emotion/core'
-import styled from '@emotion/styled'
+import React from 'react';
+import {Link, graphql} from 'gatsby';
+import {css} from '@emotion/core';
+import styled from '@emotion/styled';
 
-import Layout from '../layout/Layout'
-import SEO from '../components/seo'
+import Layout from '../layout/Layout';
+import SEO from '../components/seo';
 
 const Content = styled.div`
 	margin: 0 auto;
 	max-width: 860px;
-	padding: 1.45rem 1.0875rem;
-`
+	padding: 3rem 1.0875rem 1.45rem;
+`;
 
 const ArticleDate = styled.h5`
 	display: inline;
 	color: #bbb;
 	margin-bottom: 10px;
-`
+`;
 
 const MarkerHeader = styled.h3`
 	display: inline;
@@ -28,13 +28,13 @@ const MarkerHeader = styled.h3`
 		rgba(255, 250, 150, 0.8) 100%,
 		rgba(255, 250, 150, 0.25)
 	);
-`
+`;
 
 const ReadingTime = styled.h5`
 	display: inline;
 	color: #bbb;
 	margin-bottom: 10px;
-`
+`;
 
 const IndexPage = ({data}) => {
 	return (
@@ -62,10 +62,10 @@ const IndexPage = ({data}) => {
 				))}
 			</Content>
 		</Layout>
-	)
-}
+	);
+};
 
-export default IndexPage
+export default IndexPage;
 
 export const query = graphql`
 	query {
@@ -95,4 +95,4 @@ export const query = graphql`
 			}
 		}
 	}
-`
+`;
