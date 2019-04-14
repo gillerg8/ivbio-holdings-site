@@ -1,6 +1,7 @@
+import {Link} from 'gatsby';
 import styled from '@emotion/styled';
 import React from 'react';
-import NavLinks from './NavLinks';
+import NavLinkArray from '../data/NavLinkArray';
 
 const Nav = styled.nav`
 	max-width: 860px;
@@ -14,10 +15,28 @@ const Nav = styled.nav`
 	justify-content: center;
 `;
 
+const HomepageNavLink = styled(Link)`
+	color: black;
+	text-decoration: none;
+	display: inline-block;
+	position: relative;
+	transition-duration: 0.3s;
+	&:hover {
+		transform: scale(1.4);
+		color: var(--highlight-color);
+	}
+`;
+
 const HomepageMainNav = () => {
 	return (
 		<Nav>
-			<NavLinks navType={'homepageNav'} />
+			{NavLinkArray.map((navLink, index) => {
+				return (
+					<HomepageNavLink key={index} to={navLink.linkPath}>
+						{navLink.linkName}
+					</HomepageNavLink>
+				);
+			})}
 		</Nav>
 	);
 };

@@ -10,6 +10,8 @@ import PropTypes from 'prop-types';
 import {Link} from 'gatsby';
 import styled from '@emotion/styled';
 import Logo from '../images/ivbio-logo.png';
+import Tagline from '../components/Tagline';
+import Footer from '../components/Footer';
 
 import './layout.css';
 
@@ -30,23 +32,14 @@ const MainLogo = styled(Link)`
 
 const MainLogoTagline = styled.div`
 	text-align: center;
+	font-family: var(--secondary-font);
+	font-size: 1.3rem;
 `;
 
 const Content = styled.div`
 	margin: 0 auto;
 	padding-top: 0;
-	padding-bottom: 2.5rem;
-`;
-
-const Footer = styled.footer`
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	height: 3rem;
-	background-color: #efefef;
+	padding-bottom: 10rem;
 `;
 
 const Layout = ({children}) => (
@@ -58,9 +51,8 @@ const Layout = ({children}) => (
 		<Content>
 			<main>{children}</main>
 		</Content>
-		<Footer>
-			© {new Date().getFullYear()} IV BioHoldings. All Rights Reserved.
-		</Footer>
+		<Tagline />
+		<Footer />
 	</Fragment>
 );
 

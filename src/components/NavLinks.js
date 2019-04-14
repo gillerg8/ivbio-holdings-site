@@ -4,17 +4,6 @@ import React, {Fragment} from 'react';
 import {PropTypes} from 'prop-types';
 import NavLinkArray from '../data/NavLinkArray';
 
-const HomepageNavLink = styled(Link)`
-	color: black;
-	text-decoration: none;
-	display: inline-block;
-	position: relative;
-	transition-duration: 0.3s;
-	&:hover {
-		transform: scale(1.4);
-	}
-`;
-
 const GeneralNavLink = styled(Link)`
 	color: black;
 	text-decoration: none;
@@ -29,15 +18,6 @@ const GeneralNavLink = styled(Link)`
 const NavLinks = ({navType}) => {
 	return (
 		<Fragment>
-			{navType === 'homepageNav'
-				? NavLinkArray.map((navLink, index) => {
-						return (
-							<HomepageNavLink key={index} to={navLink.linkPath}>
-								{navLink.linkName}
-							</HomepageNavLink>
-						);
-				  })
-				: null}
 			{navType === 'generalNav'
 				? NavLinkArray.map((navLink, index) => {
 						return (

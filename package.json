@@ -29,7 +29,8 @@
 		"eslint-plugin-prettier": "^3.0.1",
 		"eslint-plugin-react": "^7.12.4",
 		"prettier": "^1.16.4",
-		"prop-types": "^15.7.2"
+		"prop-types": "^15.7.2",
+		"typeface-roboto": "0.0.54"
 	},
 	"keywords": [
 		"gatsby"
