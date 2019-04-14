@@ -5,7 +5,7 @@ const TaglineContent = styled.div`
 	display: flex;
 	align-items: flex-start;
 	justify-content: center;
-	font-family: var(--secondary-font);
+	font-family: var(--primary-font);
 	font-size: 1.8rem;
 	position: absolute;
 	bottom: 0;

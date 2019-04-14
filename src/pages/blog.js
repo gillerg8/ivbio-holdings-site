@@ -5,6 +5,7 @@ import styled from '@emotion/styled';
 
 import Layout from '../layout/GeneralLayout';
 import SEO from '../components/seo';
+import PageHeader from '../components/PageHeader';
 
 const Content = styled.div`
 	margin: 0 auto;
@@ -44,7 +45,7 @@ const IndexPage = ({data}) => {
 		<Layout>
 			<SEO title='Blog' />
 			<Content>
-				<h1>Blog</h1>
+				<PageHeader />
 				{data.allMarkdownRemark.edges.map(({node}) => (
 					<div key={node.id}>
 						<Link

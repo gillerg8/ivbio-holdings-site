@@ -6,6 +6,7 @@ import SEO from '../components/seo';
 import Card from '../components/Card';
 import Quote from '../components/Quote';
 import MartyImage from '../images/marty-portrait.jpg';
+import PageHeader from '../components/PageHeader';
 
 const Content = styled.div`
 	margin: 0 auto;
@@ -16,16 +17,12 @@ const Content = styled.div`
 	}
 `;
 
-const Header = styled.h1`
-	margin-bottom: 50px;
-`;
-
 const Builder = () => {
 	return (
 		<Layout>
 			<SEO title='Builder' />
 			<Content>
-				<Header>Blending tradition and innovation</Header>
+				<PageHeader>Blending tradition and innovation</PageHeader>
 				<Quote
 					quoteText='"Every decision that I make personally and professionally begins with,
 					and ends with, a genuine and passionate love for people."'

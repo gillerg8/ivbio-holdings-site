@@ -1,6 +1,6 @@
 :root {
-	--primary-font: 'Nunito', 'Avenir', 'Helvetica', 'sans-serif';
-	--secondary-font: 'Roboto', sans-serif;
+	--primary-font: 'Roboto', sans-serif;
+	--secondary-font: 'Nunito', 'Avenir', 'Helvetica', 'sans-serif';
 	--highlight-color: #cc0000;
 }
 
@@ -10,7 +10,7 @@ code {
 
 body {
 	margin: 0;
-	font-family: var(--primary-font);
+	font-family: var(--secondary-font);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	position: relative;
@@ -380,6 +380,7 @@ p {
 	padding-left: 0;
 	padding-right: 0;
 	padding-top: 0;
+	font-size: 1.2rem;
 	margin-bottom: 1.45rem;
 }
 figure {
