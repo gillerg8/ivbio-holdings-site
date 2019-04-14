@@ -3,13 +3,16 @@ import {Link, graphql} from 'gatsby';
 import {css} from '@emotion/core';
 import styled from '@emotion/styled';
 
-import Layout from '../layout/Layout';
+import Layout from '../layout/GeneralLayout';
 import SEO from '../components/seo';
 
 const Content = styled.div`
 	margin: 0 auto;
 	max-width: 860px;
 	padding: 3rem 1.0875rem 1.45rem;
+	@media (max-width: 1200px) {
+		padding: 1rem 1.0875rem 1.45rem;
+	}
 `;
 
 const ArticleDate = styled.h5`

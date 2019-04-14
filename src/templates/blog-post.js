@@ -1,13 +1,13 @@
-import React from 'react'
-import {graphql} from 'gatsby'
-import styled from '@emotion/styled'
-import Layout from '../layout/Layout'
+import React from 'react';
+import {graphql} from 'gatsby';
+import styled from '@emotion/styled';
+import Layout from '../layout/GeneralLayout';
 
 const Content = styled.div`
 	margin: 0 auto;
 	max-width: 860px;
 	padding: 1.45rem 1.0875rem;
-`
+`;
 
 const MarkedHeader = styled.h1`
 	display: inline;
@@ -18,12 +18,12 @@ const MarkedHeader = styled.h1`
 		rgba(255, 250, 150, 0.8) 100%,
 		rgba(255, 250, 150, 0.25)
 	);
-`
+`;
 
 const HeaderDate = styled.h3`
 	margin-top: 10px;
 	color: #bbb;
-`
+`;
 
 // STYLE THE TAGS INSIDE THE MARKDOWN HERE
 const MarkdownContent = styled.div`
@@ -47,10 +47,10 @@ const MarkdownContent = styled.div`
 	a:hover::after {
 		top: 0;
 	}
-`
+`;
 
 export default ({data}) => {
-	const post = data.markdownRemark
+	const post = data.markdownRemark;
 	return (
 		<Layout>
 			<Content>
@@ -61,8 +61,8 @@ export default ({data}) => {
 				<MarkdownContent dangerouslySetInnerHTML={{__html: post.html}} />
 			</Content>
 		</Layout>
-	)
-}
+	);
+};
 
 export const pageQuery = graphql`
 	query($path: String!) {
@@ -80,4 +80,4 @@ export const pageQuery = graphql`
 			}
 		}
 	}
-`
+`;

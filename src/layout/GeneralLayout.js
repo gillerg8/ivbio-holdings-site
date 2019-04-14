@@ -27,7 +27,7 @@ const Logo = styled(Link)`
 		filter: brightness(100%);
 	}
 	img:hover {
-		filter: brightness(120%);
+		filter: brightness(130%);
 	}
 	@media (max-width: 1200px) {
 		display: block;
@@ -40,16 +40,18 @@ const Logo = styled(Link)`
 const Content = styled.div`
 	margin: 0 auto;
 	padding-top: 0;
+	padding-bottom: 2.5rem;
 `;
 
 const Footer = styled.footer`
-	position: fixed;
-	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
 	bottom: 0;
 	width: 100%;
-	padding: 1rem;
+	height: 3rem;
 	background-color: #efefef;
-	text-align: center;
 `;
 
 const Layout = ({children}) => (
