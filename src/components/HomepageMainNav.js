@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import React from 'react';
-import NavLinks from './Navlinks';
+import NavLinks from './NavLinks';
 
 const Nav = styled.nav`
 	max-width: 860px;
