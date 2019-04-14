@@ -6,7 +6,10 @@ import Layout from '../layout/GeneralLayout';
 const Content = styled.div`
 	margin: 0 auto;
 	max-width: 860px;
-	padding: 1.45rem 1.0875rem;
+	padding: 3rem 1.0875rem 1.45rem;
+	@media (max-width: 1200px) {
+		padding: 1rem 1.0875rem 1.45rem;
+	}
 `;
 
 const MarkedHeader = styled.h1`
