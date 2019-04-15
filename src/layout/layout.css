@@ -1,6 +1,7 @@
 :root {
 	--primary-font: 'Roboto', sans-serif;
 	--secondary-font: 'Nunito', 'Avenir', 'Helvetica', 'sans-serif';
+	--black-color: #131f2b;
 	--highlight-color: #cc0000;
 }
 
@@ -380,7 +381,7 @@ p {
 	padding-left: 0;
 	padding-right: 0;
 	padding-top: 0;
-	font-size: 1.2rem;
+	font-size: 1.1rem;
 	margin-bottom: 1.45rem;
 }
 figure {

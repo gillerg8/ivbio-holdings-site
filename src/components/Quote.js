@@ -6,10 +6,13 @@ import {PropTypes} from 'prop-types';
 const QuoteContent = styled.blockquote`
 	display: flex;
 	align-items: center;
-	background-color: white;
+	color: #fff;
+	background-color: var(--black-color);
 	box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
 	border-radius: 5px;
 	padding: 15px;
+	font-size: 1.6rem;
+	line-height: 2rem;
 	margin-bottom: 50px;
 `;
 
