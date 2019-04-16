@@ -19,7 +19,7 @@ const MainLogo = styled(Link)`
 	text-decoration: none;
 	display: block;
 	width: 300px;
-	margin: 0 auto;
+	margin: 0 auto 50px;
 	img {
 		margin-bottom: 5px;
 		transition-duration: 0.4s;
@@ -28,12 +28,6 @@ const MainLogo = styled(Link)`
 	img:hover {
 		filter: brightness(130%);
 	}
-`;
-
-const MainLogoTagline = styled.div`
-	text-align: center;
-	font-family: var(--secondary-font);
-	font-size: 1.3rem;
 `;
 
 const Content = styled.div`
@@ -46,7 +40,6 @@ const Layout = ({children}) => (
 	<Fragment>
 		<MainLogo to='/'>
 			<img src={Logo} alt='IV Bio Logo' />
-			<MainLogoTagline>Innovate. Disrupt. Win.</MainLogoTagline>
 		</MainLogo>
 		<Content>
 			<main>{children}</main>

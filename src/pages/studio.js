@@ -20,7 +20,7 @@ const Studio = () => {
 		<Layout>
 			<SEO title='Studio' />
 			<Content>
-				<PageHeader>A startup that create startups</PageHeader>
+				<PageHeader>A startup that creates startups</PageHeader>
 				<Quote
 					quoteText='"Venture creation is the perfect manifestation of art and science. By
 						cross-contaminating ideas and experience across the healthcare,

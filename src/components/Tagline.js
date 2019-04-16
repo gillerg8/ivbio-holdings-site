@@ -5,8 +5,9 @@ const TaglineContent = styled.div`
 	display: flex;
 	align-items: flex-start;
 	justify-content: center;
-	font-family: var(--primary-font);
-	font-size: 1.8rem;
+	font-family: var(--benchnine-font);
+	font-weight: 400;
+	font-size: 2.4rem;
 	position: absolute;
 	bottom: 0;
 	width: 100%;
@@ -15,12 +16,12 @@ const TaglineContent = styled.div`
 	cursor: default;
 	:hover {
 		transform: skewX(-10deg);
-		color: var(--highlight-color);
+		color: var(--red-color);
 	}
 `;
 
 const Tagline = () => {
-	return <TaglineContent>Innovate. Disrupt. Win.</TaglineContent>;
+	return <TaglineContent>INNOVATE. DISRUPT. WIN.</TaglineContent>;
 };
 
 export default Tagline;

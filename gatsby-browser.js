@@ -8,5 +8,7 @@
 
 exports.onInitialClientRender = () => {
 	require('typeface-fjalla-one');
-	require('typeface-roboto');
+	require('typeface-fira-sans');
+	require('typeface-yantramanav');
+	require('typeface-benchnine');;
 };

@@ -23,7 +23,7 @@ const HomepageNavLink = styled(Link)`
 	transition-duration: 0.3s;
 	&:hover {
 		transform: scale(1.4);
-		color: var(--highlight-color);
+		color: var(--red-color);
 	}
 `;
 

@@ -6,9 +6,9 @@ const PageHeaderContent = styled.h1`
 	margin-bottom: 50px;
 	transition-duration: 0.4s;
 	cursor: default;
-	text-align: center;
-	color: var(--highlight-color);
-	font-family: var(--primary-font);
+	font-family: var(--yantramanav-font);
+	color: var(--brown-color);
+	font-weight: 300;
 `;
 
 const PageHeader = ({children}) => {

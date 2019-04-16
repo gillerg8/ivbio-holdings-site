@@ -1,8 +1,12 @@
 :root {
-	--primary-font: 'Roboto', sans-serif;
-	--secondary-font: 'Nunito', 'Avenir', 'Helvetica', 'sans-serif';
+	--fira-font: 'Fira Sans', 'Avenir', 'Helvetica', 'sans-serif';
+	--nunito-font: 'Nunito', 'Avenir', 'Helvetica', 'sans-serif';
+	--yantramanav-font: 'Yantramanav', 'sans-serif';
+	--benchnine-font: 'BenchNine', 'sans-serif';
+	;
 	--black-color: #131f2b;
-	--highlight-color: #cc0000;
+	--brown-color: #881a1a;
+	--red-color: #cc0000;
 }
 
 code {
@@ -11,7 +15,7 @@ code {
 
 body {
 	margin: 0;
-	font-family: var(--secondary-font);
+	font-family: var(--nunito-font);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	position: relative;

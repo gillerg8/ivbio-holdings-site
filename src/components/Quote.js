@@ -7,6 +7,8 @@ const QuoteContent = styled.blockquote`
 	display: flex;
 	align-items: center;
 	color: #fff;
+	font-family: var(--fira-font);
+	font-weight: 300;
 	background-color: var(--black-color);
 	box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
 	border-radius: 5px;
