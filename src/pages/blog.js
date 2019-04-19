@@ -47,27 +47,27 @@ const IndexPage = ({data}) => {
 		<Layout>
 			<SEO title='Blog' />
 			<Content>
-				<SlideObject slideDirection="down">
+				<SlideObject slideDirection='down'>
 					<PageHeader>Blog</PageHeader>
+					{data.allMarkdownRemark.edges.map(({node}) => (
+						<div key={node.id}>
+							<Link
+								to={node.frontmatter.path}
+								css={css`
+									text-decoration: none;
+									color: inherit;
+								`}
+							>
+								<MarkerHeader>{node.frontmatter.title} </MarkerHeader>
+								<div>
+									<ArticleDate>{node.frontmatter.date}</ArticleDate>
+									<ReadingTime> - {node.fields.readingTime.text}</ReadingTime>
+								</div>
+								<p>{node.excerpt}</p>
+							</Link>
+						</div>
+					))}
 				</SlideObject>
-				{data.allMarkdownRemark.edges.map(({node}) => (
-					<div key={node.id}>
-						<Link
-							to={node.frontmatter.path}
-							css={css`
-								text-decoration: none;
-								color: inherit;
-							`}
-						>
-							<MarkerHeader>{node.frontmatter.title} </MarkerHeader>
-							<div>
-								<ArticleDate>{node.frontmatter.date}</ArticleDate>
-								<ReadingTime> - {node.fields.readingTime.text}</ReadingTime>
-							</div>
-							<p>{node.excerpt}</p>
-						</Link>
-					</div>
-				))}
 			</Content>
 		</Layout>
 	);

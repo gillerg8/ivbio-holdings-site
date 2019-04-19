@@ -22,15 +22,22 @@ const Vision = () => {
 		<Layout>
 			<SEO title='Vision' />
 			<Content>
-				<SlideObject slideDirection="down">
+				<SlideObject slideDirection='down'>
 					<PageHeader>Vision</PageHeader>
 					<SubHeader>
 						In the golden age of innovation, anything is possible
 					</SubHeader>
+					<Quote>
+						IV BioHoldings was founded on the belief that the next wave of
+						medical breakthroughs will not originate at large healthcare
+						organizations, but will instead spawn from creative entrepreneurs
+						who seamlessly connect data, technology and capital. We believe that
+						an integrated and flexible approach can lead to the rapid discovery
+						and commercialization of scientific truths &mdash; speeding{' '}
+						<em>effective</em> and <em>affordable</em> innovation to patients
+						worldwide.
+					</Quote>
 				</SlideObject>
-				<Quote>
-					IV BioHoldings was founded on the belief that the next wave of medical breakthroughs will not originate at large healthcare organizations, but will instead spawn from creative entrepreneurs who seamlessly connect data, technology and capital. We believe that an integrated and flexible approach can lead to the rapid discovery and commercialization of scientific truths &mdash; speeding <em>effective</em> and <em>affordable</em> innovation to patients worldwide.
-				</Quote>
 			</Content>
 		</Layout>
 	);
