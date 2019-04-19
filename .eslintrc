@@ -1,5 +1,5 @@
 {
-	"extends": ["plugin:prettier/recommended", "plugin:react/recommended"],
+	"extends": ["eslint:recommended", "prettify", "prettify/react"],
 	"parserOptions": {
 		"ecmaVersion": 8,
 		"sourceType": "module",
@@ -11,20 +11,5 @@
 		"browser": true,
 		"es6": true,
 		"node": true
-	},
-	"rules": {
-		"semi": ["error", "always"],
-		"no-unused-vars": [
-			"error",
-			{"vars": "all", "args": "after-used", "ignoreRestSiblings": false}
-		],
-		"no-console": ["error", {"allow": ["warn", "error", "log"]}],
-		"no-dupe-args": "error",
-		"eqeqeq": ["error", "smart"],
-		"no-empty-function": "error",
-		"no-else-return": "off",
-		"no-eval": "error",
-		"prettier/prettier": "error"
-	},
-	"plugins": ["react"]
+	}
 }

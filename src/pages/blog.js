@@ -6,6 +6,7 @@ import styled from '@emotion/styled';
 import Layout from '../layout/GeneralLayout';
 import SEO from '../components/seo';
 import PageHeader from '../components/PageHeader';
+import SlideObject from '../components/SlideObject';
 import {PropTypes} from 'prop-types';
 
 const Content = styled.div`
@@ -46,7 +47,9 @@ const IndexPage = ({data}) => {
 		<Layout>
 			<SEO title='Blog' />
 			<Content>
-				<PageHeader>Blog</PageHeader>
+				<SlideObject slideDirection="down">
+					<PageHeader>Blog</PageHeader>
+				</SlideObject>
 				{data.allMarkdownRemark.edges.map(({node}) => (
 					<div key={node.id}>
 						<Link

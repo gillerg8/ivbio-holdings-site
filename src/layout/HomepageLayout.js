@@ -19,7 +19,7 @@ const MainLogo = styled(Link)`
 	text-decoration: none;
 	display: block;
 	width: 300px;
-	margin: 0 auto 50px;
+	margin: 0 auto 20px;
 	img {
 		margin-bottom: 5px;
 		transition-duration: 0.4s;

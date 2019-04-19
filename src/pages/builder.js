@@ -7,6 +7,8 @@ import Card from '../components/Card';
 import Quote from '../components/Quote';
 import MartyImage from '../images/marty-portrait.jpg';
 import PageHeader from '../components/PageHeader';
+import SubHeader from '../components/SubHeader';
+import SlideObject from '../components/SlideObject';
 
 const Content = styled.div`
 	margin: 0 auto;
@@ -22,11 +24,16 @@ const Builder = () => {
 		<Layout>
 			<SEO title='Builder' />
 			<Content>
-				<PageHeader>Blending tradition and innovation</PageHeader>
-				<Quote
-					quoteText='"Every decision that I make personally and professionally begins with,
-					and ends with, a genuine and passionate love for people."'
-				/>
+				<SlideObject slideDirection="down">
+					<PageHeader>Builder</PageHeader>
+					<SubHeader>
+						Blending tradition and innovation
+					</SubHeader>
+				</SlideObject>
+				<Quote>
+					"Every decision that I make personally and professionally begins with,
+					and ends with, a genuine and passionate love for people."
+				</Quote>
 				<Card
 					imageSrc={MartyImage}
 					imageAlt='Marty Keiser'

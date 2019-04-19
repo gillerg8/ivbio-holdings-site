@@ -6,6 +6,7 @@ import {PropTypes} from 'prop-types';
 const QuoteContent = styled.blockquote`
 	display: flex;
 	align-items: center;
+	flex-direction: column;
 	color: #fff;
 	font-family: var(--fira-font);
 	font-weight: 300;
@@ -18,16 +19,16 @@ const QuoteContent = styled.blockquote`
 	margin-bottom: 50px;
 `;
 
-const Quote = ({quoteText}) => {
+const Quote = ({children}) => {
 	return (
 		<InteractiveObject>
-			<QuoteContent>{quoteText}</QuoteContent>
+			<QuoteContent>{children}</QuoteContent>
 		</InteractiveObject>
 	);
 };
 
 Quote.propTypes = {
-	quoteText: PropTypes.string
+	children: PropTypes.node
 };
 
 export default Quote;

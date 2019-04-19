@@ -1,9 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import Layout from '../layout/HomepageLayout';
 import SEO from '../components/seo';
 
 import styled from '@emotion/styled';
+import {useSpring, animated} from 'react-spring';
 import HomepageMainNav from '../components/HomepageMainNav';
 
 import Icon from '../images/ivbio-icon.png';
@@ -27,7 +28,6 @@ const BackgroundImage = styled.div`
     bottom: 0;
     left: 0;
     right: 0;
-    opacity: .08;
     width: 100%;
 	height: 100%;
     max-width: 700px;
@@ -35,14 +35,24 @@ const BackgroundImage = styled.div`
 	margin: 20px auto 0;
 `;
 
-const IndexPage = () => (
-	<Layout>
-		<SEO title='Home' keywords={[`gatsby`, `application`, `react`]} />
-		<Container>
-			<BackgroundImage />
-			<HomepageMainNav />
-		</Container>
-	</Layout>
-);
+const IndexPage = () => {
+	const animation = useSpring({
+		opacity: 0.08,
+		from: {opacity: 1},
+		config: {mass: 1, tension: 280, friction: 200}
+	});
+
+	return (
+		<Layout>
+			<SEO title='Home' keywords={[`gatsby`, `application`, `react`]} />
+			<Container>
+				<animated.h1 style={animation}>
+					<BackgroundImage />
+				</animated.h1>
+				<HomepageMainNav />
+			</Container>
+		</Layout>
+	);
+};
 
 export default IndexPage;

@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import {PropTypes} from 'prop-types';
 
 const PageHeaderContent = styled.h1`
-	margin-bottom: 50px;
+	margin-bottom: 20px;
 	transition-duration: 0.4s;
 	cursor: default;
 	font-family: var(--yantramanav-font);

@@ -1,6 +1,7 @@
 import {Link} from 'gatsby';
 import styled from '@emotion/styled';
-import React from 'react';
+import React, {useState} from 'react';
+import {useTransition, animated} from 'react-spring';
 import NavLinkArray from '../data/NavLinkArray';
 
 const Nav = styled.nav`
@@ -28,13 +29,22 @@ const HomepageNavLink = styled(Link)`
 `;
 
 const HomepageMainNav = () => {
+	const [items, set] = useState(NavLinkArray);
+
+	const transitions = useTransition(items, (item) => item.linkName, {
+		from: {transform: 'translate3d(0,-1000px,0)'},
+		enter: {transform: 'translate3d(0,0px,0)'},
+		trail: 300
+	});
 	return (
 		<Nav>
-			{NavLinkArray.map((navLink, index) => {
+			{transitions.map(({item, props, key}) => {
 				return (
-					<HomepageNavLink key={index} to={navLink.linkPath}>
-						{navLink.linkName}
-					</HomepageNavLink>
+					<animated.div key={key} style={props}>
+						<HomepageNavLink to={item.linkPath}>
+							{item.linkName}
+						</HomepageNavLink>
+					</animated.div>
 				);
 			})}
 		</Nav>
