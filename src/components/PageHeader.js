@@ -8,7 +8,7 @@ const PageHeaderContent = styled.h1`
 	cursor: default;
 	font-family: var(--yantramanav-font);
 	color: var(--brown-color);
-	font-weight: 300;
+	font-weight: 600;
 `;
 
 const PageHeader = ({children}) => {

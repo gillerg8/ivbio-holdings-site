@@ -37,7 +37,7 @@ const SlideObject = ({children, slideDirection}) => {
 };
 
 SlideObject.propTypes = {
-	children: PropTypes.string
+	children: PropTypes.node
 };
 
 export default SlideObject;

@@ -6,7 +6,7 @@ import {PropTypes} from 'prop-types';
 const CardContainer = styled.div`
 	display: flex;
 	align-items: center;
-	background-color: white;
+	background-color: rgba(255, 255, 255, 0.5);
 	box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
 	border-radius: 5px;
 	padding: 15px;
@@ -20,7 +20,8 @@ const CardImageContainer = styled.div`
 `;
 
 const CardImage = styled.img`
-	max-width: 100%;
+	max-width: 225px;
+	max-height: 100%;
 	margin: 0;
 `;
 

@@ -34,7 +34,7 @@ const HomepageMainNav = () => {
 	const transitions = useTransition(items, (item) => item.linkName, {
 		from: {transform: 'translate3d(0,-1000px,0)'},
 		enter: {transform: 'translate3d(0,0px,0)'},
-		trail: 300
+		trail: 250
 	});
 	return (
 		<Nav>

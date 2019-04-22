@@ -9,7 +9,11 @@ import React, {Fragment} from 'react';
 import PropTypes from 'prop-types';
 import {Link} from 'gatsby';
 import styled from '@emotion/styled';
+import MediaQuery from 'react-responsive';
+import GeneralWatermarkImage from '../components/GeneralWatermarkImage';
 import Icon from '../images/ivbio-icon.png';
+import GeneralMainNav from '../components/GeneralMainNav';
+import HamburgerMainNav from '../components/HamburgerMainNav';
 import Tagline from '../components/Tagline';
 import Footer from '../components/Footer';
 
@@ -47,10 +51,17 @@ const Content = styled.div`
 
 const Layout = ({children}) => (
 	<Fragment>
+		<GeneralWatermarkImage />
 		<Logo to='/'>
 			<img src={Icon} alt='IV Bio Icon' />
 		</Logo>
+		<MediaQuery query='(max-width: 1300px)'>
+			<HamburgerMainNav />
+		</MediaQuery>
 		<Content>
+			<MediaQuery query='(min-width: 1300px)'>
+				<GeneralMainNav />
+			</MediaQuery>
 			<main>{children}</main>
 		</Content>
 		<Tagline />

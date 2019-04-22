@@ -3,7 +3,6 @@ import styled from '@emotion/styled';
 
 import Layout from '../layout/GeneralLayout';
 import SEO from '../components/seo';
-import Quote from '../components/Quote';
 import PageHeader from '../components/PageHeader';
 import SubHeader from '../components/SubHeader';
 import SlideObject from '../components/SlideObject';
@@ -27,7 +26,7 @@ const Vision = () => {
 					<SubHeader>
 						In the golden age of innovation, anything is possible
 					</SubHeader>
-					<Quote>
+					<p>
 						IV BioHoldings was founded on the belief that the next wave of
 						medical breakthroughs will not originate at large healthcare
 						organizations, but will instead spawn from creative entrepreneurs
@@ -36,7 +35,7 @@ const Vision = () => {
 						and commercialization of scientific truths &mdash; speeding{' '}
 						<em>effective</em> and <em>affordable</em> innovation to patients
 						worldwide.
-					</Quote>
+					</p>
 				</SlideObject>
 			</Content>
 		</Layout>

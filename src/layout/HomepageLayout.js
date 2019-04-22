@@ -28,6 +28,9 @@ const MainLogo = styled(Link)`
 	img:hover {
 		filter: brightness(130%);
 	}
+	@media (max-width: 480px) {
+		margin: 0 auto;
+	}
 `;
 
 const Content = styled.div`
